@@ -42,10 +42,9 @@ const release = async () => {
 
   execSync('npm publish');
   try {
-    throw('derp');
     execSync('npm publish');
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     process.exit(1);
   }
   execSync(`git tag -a ${tag} -m "${tag}"`);
