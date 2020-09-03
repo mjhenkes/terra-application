@@ -40,7 +40,6 @@ const release = async () => {
 
   const tag = `v${packageJson.version}`;
 
-  execSync('npm publish');
   try {
     execSync('npm publish');
   } catch (error) {
