@@ -41,6 +41,13 @@ const release = async () => {
   const tag = `v${packageJson.version}`;
 
   execSync('npm publish');
+  try {
+    throw('derp');
+    execSync('npm publish');
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
   execSync(`git tag -a ${tag} -m "${tag}"`);
   execSync('git push origin --tags');
 };
