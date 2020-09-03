@@ -84,7 +84,6 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:scss": "stylelint src/**/*.scss",
-    "postpublish": "git push --follow-tags",
     "precompile": "rm -rf lib",
     "start": "tt-serve",
     "start-prod": "tt-serve -p",
